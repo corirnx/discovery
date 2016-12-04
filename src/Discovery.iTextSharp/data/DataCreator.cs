@@ -1,18 +1,77 @@
 ﻿using Discovery.iTextSharp.models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Discovery.iTextSharp.data
 {
     internal static class DataCreator
     {
+        internal static void CreateSeller()
+        {
+            var seller = new Customer
+            {
+                Company = new BaseAddress
+                {
+                    Number = 0,
+                    Name = "Coffeenation GmbH",
+                    Website = "www.coffeenation.de",
+                    Mail = "info@coffeenation.de",
+                    Phone = "0309695320",
+                    Country = "Germany",
+                    Postal = "17541",
+                    Street = "Thortauer Ring 4",
+                    Location = "Berlin"
+                },
+                Contacts = new List<IAddress>
+                {
+                    new BaseAddress
+                    {
+                        Number = -1,
+                        Name = "Constanze Fogt",
+                        Website = "www.coffeenation.de",
+                        Mail = "c.fogt@coffeenation.de",
+                        Phone = "0309695317",
+                        Country = "Germany",
+                        Postal = "17541",
+                        Street = "Thortauer Ring 4",
+                        Location = "Berlin"
+                    }
+                }
+            };
+
+            var filePath = Path.Combine(GetDirectory(), "seller-0.json");
+            var content = JsonConvert.SerializeObject(seller);
+            SaveFile(filePath, content);
+        }
+
         internal static void CreateBill()
         {
-            var bill = new Bill();
-            bill.Articles = CreateArticles();
-            bill.Customer = CreateCustomer();
-            bill.Date = DateTime.Now;
-            bill.Number = 98142;
+            var bill = new Bill
+            {
+                Number = 98142,
+                Date = DateTime.Now,
+                Articles = CreateArticles(),
+                Customer = CreateCustomer()
+            };
+
+            var filePath = Path.Combine(GetDirectory(), "bill-98142.json");
+            var content = JsonConvert.SerializeObject(bill);
+            SaveFile(filePath, content);
+        }
+
+        static void SaveFile(string filename, string content)
+        {
+            if (File.Exists(filename))
+                File.Delete(filename);
+
+            File.WriteAllText(filename, content);
+        }
+
+        static string GetDirectory()
+        {
+            return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data");
         }
 
         static Customer CreateCustomer()
@@ -45,8 +104,7 @@ namespace Discovery.iTextSharp.data
                         Street = "Franz-Josef Strasse 47",
                         Location = "Berlin"
                     }
-                },
-
+                }
             };
 
             return customer;
