@@ -1,4 +1,4 @@
-﻿namespace Testing.iTextSharp.models
+﻿namespace Discovery.iTextSharp.models
 {
     internal class Article
     {

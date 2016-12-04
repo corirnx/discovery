@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Testing.iTextSharp.models
+namespace Discovery.iTextSharp.models
 {
     internal class Bill
     {

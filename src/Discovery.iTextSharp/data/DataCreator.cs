@@ -1,6 +1,13 @@
-﻿namespace Testing.iTextSharp.data
+﻿using Discovery.iTextSharp.models;
+
+namespace Discovery.iTextSharp.data
 {
-    class DataCreator
+    internal static class DataCreator
     {
+        internal static void CreateBill()
+        {
+            var bill = new Bill();
+        }
+
     }
 }
