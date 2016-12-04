@@ -53,7 +53,8 @@ namespace Discovery.iTextSharp.data
                 Number = 98142,
                 Date = DateTime.Now,
                 Articles = CreateArticles(),
-                Customer = CreateCustomer()
+                Customer = CreateCustomer(),
+                DeliveryNumber = 2345
             };
 
             var filePath = Path.Combine(GetDirectory(), "bill-98142.json");

@@ -9,5 +9,6 @@ namespace Discovery.iTextSharp.models
         public DateTime Date { get; set; }
         public Customer Customer { get; set; }
         public IEnumerable<Article> Articles { get; set; }
+        public long DeliveryNumber { get; set; }
     }
 }
