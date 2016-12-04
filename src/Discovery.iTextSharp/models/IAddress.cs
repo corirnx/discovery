@@ -1,6 +1,6 @@
 ﻿namespace Discovery.iTextSharp.models
 {
-    internal interface IAddress
+    public interface IAddress
     {
         long Number { get; set; }
         string Name { get; set; }

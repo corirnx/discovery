@@ -24,7 +24,7 @@ namespace Discovery.iTextSharp.data
                     Street = "Thortauer Ring 4",
                     Location = "Berlin"
                 },
-                Contacts = new List<IAddress>
+                Contacts = new List<BaseAddress>
                 {
                     new BaseAddress
                     {
@@ -90,7 +90,7 @@ namespace Discovery.iTextSharp.data
                     Street = "Franz-Josef Strasse 47",
                     Location = "Berlin"
                 },
-                Contacts = new List<IAddress>
+                Contacts = new List<BaseAddress>
                 {
                     new BaseAddress
                     {

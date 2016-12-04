@@ -2,9 +2,9 @@
 
 namespace Discovery.iTextSharp.models
 {
-    internal class Customer
+    public class Customer
     {
-        internal IAddress Company { get; set; }
-        internal IEnumerable<IAddress> Contacts { get; set; }
+        public BaseAddress Company { get; set; }
+        public IEnumerable<BaseAddress> Contacts { get; set; }
     }
 }

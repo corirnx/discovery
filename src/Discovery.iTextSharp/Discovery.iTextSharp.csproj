@@ -52,6 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="data\DataCreator.cs" />
+    <Compile Include="infrastructure\PdfCreator.cs" />
+    <Compile Include="infrastructure\helper\FileManager.cs" />
+    <Compile Include="infrastructure\helper\Layout.cs" />
     <Compile Include="models\BaseAddress.cs" />
     <Compile Include="models\Article.cs" />
     <Compile Include="models\Bill.cs" />
@@ -62,17 +65,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="data\bill-98142.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="data\seller-0.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="data\bill-98142.json" />
+    <None Include="data\seller-0.json" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="infrastructure\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

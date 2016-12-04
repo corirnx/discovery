@@ -1,12 +1,12 @@
 ﻿namespace Discovery.iTextSharp.models
 {
-    internal class Article
+    public class Article
     {
-        internal long Number { get; set; }
-        internal string DisplayName { get; set; }
-        internal string Producer { get; set; }
-        internal decimal Price { get; set; }
-        internal decimal TaxInPercent { get; set; }
-        internal int Amount { get; set; }
+        public long Number { get; set; }
+        public string DisplayName { get; set; }
+        public string Producer { get; set; }
+        public decimal Price { get; set; }
+        public decimal TaxInPercent { get; set; }
+        public int Amount { get; set; }
     }
 }

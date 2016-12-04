@@ -1,6 +1,6 @@
 ﻿namespace Discovery.iTextSharp.models
 {
-    internal class BaseAddress : IAddress
+    public class BaseAddress : IAddress
     {
         public string Country { get; set; }
         public string Fax { get; set; }

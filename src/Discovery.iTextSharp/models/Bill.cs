@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace Discovery.iTextSharp.models
 {
-    internal class Bill
+    public class Bill
     {
-        internal long Number { get; set; }
-        internal DateTime Date { get; set; }
-        internal Customer Customer { get; set; }
-        internal IEnumerable<Article> Articles { get; set; }
+        public long Number { get; set; }
+        public DateTime Date { get; set; }
+        public Customer Customer { get; set; }
+        public IEnumerable<Article> Articles { get; set; }
     }
 }
