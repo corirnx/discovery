@@ -11,5 +11,6 @@
         string Country { get; set; }
         string Street { get; set; }
         string Postal { get; set; }
+        string Location { get; set; }
     }
 }

@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="data\DataCreator.cs" />
+    <Compile Include="models\BaseAddress.cs" />
     <Compile Include="models\Article.cs" />
     <Compile Include="models\Bill.cs" />
     <Compile Include="models\Customer.cs" />
