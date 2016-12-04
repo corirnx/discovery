@@ -11,7 +11,8 @@ namespace Discovery.iTextSharp
         {
             CheckExistingFiles();
 
-
+            Console.WriteLine("done");
+            Console.ReadKey();
         }
 
         static void CheckExistingFiles()
